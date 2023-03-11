@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>+KrittZ Calc</title>
+    <link rel="icon" href="./assets/test.png">
+  </head>
+  <body>
+<!--=========================|Cursor|================================-->
+    <div class="cursor"></div>
+  <div class="cursor2"></div>
+
+  <!--=========================|Titulo|================================-->
+
+    <div class="titulo">
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        KrittZ
+      </a>
+    </div>
+
+<!--=========================|Conteúdo|================================-->
+    <div class="bg" >
+      <div class="calculadora">
+        
+        <input type="text" id="resultado" disabled="disabled">
+        <table>
+          <tr id="primeira">
+              <td><button type="button" class="botao" onclick="clean()">AC</button></td>
+              <td><button type="button" class="botao" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button></td>
+              <td><button type="button" class="botao" onclick="insert('/')"><i class="fa-solid fa-divide"></i></button></td>
+              <td><button type="button" class="botao" onclick="insert('*')"><i class="fa-solid fa-xmark"></i></button></td>
+          </tr>
+          <tr id="segunda">
+              <td><button type="button" class="botao" onclick="insert('7')">7</button></td>
+              <td><button type="button" class="botao" onclick="insert('8')">8</button></td>
+              <td><button type="button" class="botao" onclick="insert('9')">9</button></td>
+              <td><button type="button" class="botao" onclick="insert('-')"><i class="fa-solid fa-square-minus"></i></button></td>
+          </tr>
+          <tr id="terceira">
+              <td><button type="button" class="botao" onclick="insert('4')">4</button></td>
+              <td><button type="button" class="botao" onclick="insert('5')">5</button></td>
+              <td><button type="button" class="botao" onclick="insert('6')">6</button></td>
+              <td><button type="button" class="botao" onclick="insert('+')"><i class="fa-solid fa-square-plus"></i></button></td>
+          </tr>
+          <tr id=""quarta>
+              <td><button type="button" class="botao" onclick="insert('1')">1</button></td>
+              <td><button type="button" class="botao" onclick="insert('2')">2</button></td>
+              <td><button type="button" class="botao" onclick="insert('3')">3</button></td>
+              <td rowspan="2"><button type="button" class="botao igual" style="height: 126px;" onclick="confirma()"><i class="fa-solid fa-equals"></i></button></td>
+          </tr>
+          <tr>
+              <td colspan="2"><button type="button" class="botao" style="width: 126px;" onclick="insert('0')">0</button></td>
+              <td><button type="button" class="botao" onclick="insert('.')">&dot;</button></td>
+          </tr>
+      </table>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <!--=========================|Import Scripts|================================-->
+    <script src="./js/cursor.js"></script>
+    <script src="./js/calculadora.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="https://kit.fontawesome.com/2bab216555.js" crossorigin="anonymous"></script>
+  </body>
+</html>
